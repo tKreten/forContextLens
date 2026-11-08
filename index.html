@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Barcode App</title>
-    <script type="module" crossorigin src="/forContextLens/assets/index-C6zbQb6t.js"></script>
-    <link rel="stylesheet" crossorigin href="/forContextLens/assets/index-C3tbzTyv.css">
+    <!-- Replaced by Vite: strict in the published build, HMR permitted locally. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; media-src blob:; worker-src blob:; connect-src 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- Light is the brand as drawn and the default; dark is the screening
+         room, and the reader may still ask for it. -->
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#dee2ed" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#232837" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="description"
+      content="forContext Lens liest einen ganzen Spielfilm im Browser: Farbe, Schnitt und Ton als eine Fläche. Multimodale Datenanalyse, Institut für Digital Humanities, Göttingen."
+    />
+    <title>forContext Lens</title>
+
+    <!-- The two faces the first paint needs: the reading roman and the
+         wordmark. The italic and the extended sets are fetched only if a glyph
+         asks for them. -->
+    <link rel="preload" href="/forContextLens/fonts/inclusive-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/forContextLens/fonts/coustard-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- The mark itself, not a reduction of it: three squares survive sixteen
+         pixels where a triangulated figure does not. The contour is thickened
+         from three units to five, because at favicon scale the drawn weight
+         falls below a device pixel and the stack loses its separation. -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-2.5 -2.4 108.5 107.1'><g stroke='%23000000' stroke-width='5'><rect x='16.1' y='0.24' width='87.36' height='87.36' rx='11.17' fill='%238c8fb9'/><rect x='8.82' y='7.4' width='87.36' height='87.36' rx='11.17' fill='%23a57d9e'/><rect x='0.1' y='14.8' width='87.36' height='87.36' rx='11.17' fill='%23dee2ed' fill-opacity='0.6'/></g></svg>"
+    />
+    <script type="module" crossorigin src="/forContextLens/assets/index-F6AgU1ht.js"></script>
+    <link rel="modulepreload" crossorigin href="/forContextLens/assets/vendor-D70Yezoy.js">
+    <link rel="stylesheet" crossorigin href="/forContextLens/assets/index-DWKpySjr.css">
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      forContext Lens verarbeitet Filme vollständig im Browser und benötigt dafür JavaScript.
+    </noscript>
   </body>
 </html>
